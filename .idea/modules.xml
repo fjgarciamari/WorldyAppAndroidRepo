@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WorldyAppAndroid.iml" filepath="$PROJECT_DIR$/WorldyAppAndroid.iml" />
+      <module fileurl="file://C:\Users\Alumno\Desktop\WorldyAppAndroidRepo\WorldyAppAndroid.iml" filepath="C:\Users\Alumno\Desktop\WorldyAppAndroidRepo\WorldyAppAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WorldyAppAndroidRepo.iml" filepath="$PROJECT_DIR$/WorldyAppAndroidRepo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Alumno\Desktop\WorldyAppAndroidRepo\app\app.iml" filepath="C:\Users\Alumno\Desktop\WorldyAppAndroidRepo\app\app.iml" />
     </modules>
   </component>
 </project>
