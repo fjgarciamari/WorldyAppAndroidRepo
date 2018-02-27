@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.alumno.worldyappandroid.R;
 
@@ -81,8 +82,7 @@ public class FavouritesFragment extends Fragment {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+            //Toast.makeText(context, "Entrando en FavouritesFragment", Toast.LENGTH_SHORT).show();
         }
     }
 

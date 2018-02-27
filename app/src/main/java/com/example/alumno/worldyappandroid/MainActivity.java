@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Layout;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.alumno.worldyappandroid.Favourites.FavouritesFragment;
 import com.example.alumno.worldyappandroid.GuidesRecyclerView.GuidesFragment;
@@ -26,22 +27,24 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            FragmentManager manager = getSupportFragmentManager();
+            FragmentTransaction transaction = manager.beginTransaction();
             switch (item.getItemId()) {
                 case R.id.id_guides:
                     //mTextMessage.setText("Guides");
-                    changeFragment(1);
+                    transaction.replace(R.id.fragmentContainer,new GuidesFragment()).commit();
                     return true;
                 case R.id.id_map:
                     //mTextMessage.setText("Map");
-                    changeFragment(2);
+                    transaction.replace(R.id.fragmentContainer,new MapFragment()).commit();
                     return true;
                 case R.id.id_fav:
                     //mTextMessage.setText("Favourites");
-                    changeFragment(3);
+                    transaction.replace(R.id.fragmentContainer,new FavouritesFragment()).commit();
                     return true;
                 case R.id.id_prof:
                     //mTextMessage.setText("Profile");
-                    changeFragment(4);
+                    transaction.replace(R.id.fragmentContainer,new ProfileFragment()).commit();
                     return true;
             }
             return false;
@@ -58,24 +61,5 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
     }
-
-    private void changeFragment(int position) {
-
-        FragmentManager manager = getSupportFragmentManager();
-        Fragment newFragment = null;
-
-        if (position == 1) {
-            newFragment = new GuidesFragment();
-        } else if (position == 2) {
-            newFragment = new MapFragment();
-        } else if (position == 3){
-            newFragment = new FavouritesFragment();
-        } else if (position == 4) {
-            newFragment = new ProfileFragment();
-        }
-
-        manager.beginTransaction().replace(R.id.fragmentContainer, newFragment).commit();
-    }
-
 
 }
